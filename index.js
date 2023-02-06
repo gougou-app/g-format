@@ -18,8 +18,8 @@ const getCamelCaseObject = (obj) => {
   return obj;
 }
 
-const FormatObjectKeys = {
-  getCamelCaseObject
+const GFormat = {
+  getCamelCaseObject: getCamelCaseObject
 };
 
-export default FormatObjectKeys;
+module.exports = GFormat;
