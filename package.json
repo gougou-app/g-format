@@ -1,0 +1,16 @@
+{
+  "name": "format_objecet_keys",
+  "version": "1.0.0",
+  "description": "convert object keys to camelCase",
+  "keywords": ["utils", "format", "object", "camelCase"],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gougou_app/format_objecet_keys"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "siria",
+  "license": "MIT"
+}
