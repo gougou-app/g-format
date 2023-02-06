@@ -1,6 +1,6 @@
 {
-  "name": "format_objecet_keys",
-  "version": "1.0.2",
+  "name": "format_object_keys",
+  "version": "0.0.2",
   "description": "convert object keys to camelCase",
   "keywords": ["utils", "format", "object", "camelCase"],
   "main": "index.js",
