@@ -1,12 +1,12 @@
 {
-  "name": "format_object_keys",
+  "name": "format-object-key",
   "version": "0.0.2",
   "description": "convert object keys to camelCase",
   "keywords": ["utils", "format", "object", "camelCase"],
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gougou-app/format_object_keys"
+    "url": "https://github.com/gougou-app/format_object_key"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
