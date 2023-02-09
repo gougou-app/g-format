@@ -13,15 +13,15 @@ const underscore2CamelCase = (str) => {
 }
 
 const camelCase2underscore = (str) => {
-  let l = 0, r = 0;
   const words = [];
-  while (r <= str.length) {
+  for (let l = 0, r = 0; r <= str.length; ++r) {
+    if (str[r] === '_')
+      continue;
     if (r == str.length || str[r] === str[r].toUpperCase()) {
       let word = str.slice(l, r).toLowerCase();
       words.push(word);
       l = r;
     }
-    ++r;
   }
   return words.join('_');
 }
