@@ -26,35 +26,34 @@ describe('test camelCase2underscore', function () {
 });
 
 describe('test formatObject', function () {
-
+  let underscoreObj = {
+    'id': 1,
+    'my_name': 'siria',
+    'my_real_name': 'dog',
+  };
+  let camelCaseObj = {
+    'id': 1,
+    'myName': 'siria',
+    'myRealName': 'dog',
+  }
   it('underscore to camelCase', function () {
-    let underscoreObj = {
-      'id': 1,
-      'my_name': 'siria',
-      'my_real_name': 'dog',
-    };
-    let camelCaseObj = {
-      'id': 1,
-      'myName': 'siria',
-      'myRealName': 'dog',
-    }
-    const json1 = JSON.stringify(GFormat.getCamelCase(underscoreObj));
+    const json1 = JSON.stringify(GFormat.getCamelCase({...underscoreObj}));
     const json2 = JSON.stringify(camelCaseObj);
     assert.equal(json1 === json2, true);
   });
   it('camelCase to underscore', function () {
-    let underscoreObj = {
-      'id': 1,
-      'my_name': 'siria',
-      'my_real_name': 'dog',
-    };
-    let camelCaseObj = {
-      'id': 1,
-      'myName': 'siria',
-      'myRealName': 'dog',
-    }
-    const json1 = JSON.stringify(GFormat.getUndersocre(camelCaseObj));
+    const json1 = JSON.stringify(GFormat.getUndersocre({...camelCaseObj}));
     const json2 = JSON.stringify(underscoreObj);
+    assert.equal(json1 === json2, true);
+  });
+  it('underscore to underscore', function () {
+    const json1 = JSON.stringify(GFormat.getUndersocre({...underscoreObj}));
+    const json2 = JSON.stringify(underscoreObj);
+    assert.equal(json1 === json2, true);
+  });
+  it('camelCase to camelCase', function () {
+    const json1 = JSON.stringify(GFormat.getCamelCase({...camelCaseObj}));
+    const json2 = JSON.stringify(camelCaseObj);
     assert.equal(json1 === json2, true);
   });
 });
