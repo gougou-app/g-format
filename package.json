@@ -1,6 +1,6 @@
 {
   "name": "g-format",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "g stands for gougou, means 狗勾. Convert object keys to camelCase",
   "keywords": [
     "狗勾",
