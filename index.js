@@ -42,9 +42,19 @@ const formatObject = (obj, formatType) => {
   return obj;
 }
 
+const getCamelCase = (obj) => {
+  return formatObject(obj, formatTypes.CAMELCASE);
+}
+
+const getUndersocre = (obj) => {
+  return formatObject(obj, formatTypes.UNDERSCORE);
+}
+
 const GFormat = {
   underscore2CamelCase,
   camelCase2underscore,
+  getCamelCase,
+  getUndersocre,
   formatObject,
   formatTypes,
 };

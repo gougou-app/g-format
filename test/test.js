@@ -38,8 +38,7 @@ describe('test formatObject', function () {
       'myName': 'siria',
       'myRealName': 'dog',
     }
-    const json1 = JSON.stringify(
-      GFormat.formatObject(underscoreObj, GFormat.formatTypes.CAMELCASE));
+    const json1 = JSON.stringify(GFormat.getCamelCase(underscoreObj));
     const json2 = JSON.stringify(camelCaseObj);
     assert.equal(json1 === json2, true);
   });
@@ -54,8 +53,7 @@ describe('test formatObject', function () {
       'myName': 'siria',
       'myRealName': 'dog',
     }
-    const json1 = JSON.stringify(
-      GFormat.formatObject(camelCaseObj, GFormat.formatTypes.UNDERSCORE));
+    const json1 = JSON.stringify(GFormat.getUndersocre(camelCaseObj));
     const json2 = JSON.stringify(underscoreObj);
     assert.equal(json1 === json2, true);
   });
