@@ -35,9 +35,10 @@ const formatObject = (obj, formatType) => {
 
   for (const k in obj) {
     const newK = convertFunc(k);
+    if (k === newK)
+      continue;
     Object.defineProperty(obj, newK, Object.getOwnPropertyDescriptor(obj, k));
-    if (k !== newK)
-      delete obj[k];
+    delete obj[k];
   }
   return obj;
 }
